@@ -7,7 +7,7 @@ const projetos = [
     title: "Gerador Automático de Relatórios com IA",
     segment: "Inteligência Artificial",
     icon: Brain,
-    stack: ["Next.js", "OpenAI API", "PostgreSQL", "Redis", "PDF.js"],
+    stack: ["Next.js", "OpenAI API", "PostgreSQL", "Redis", "PDF.js", "EmailJs", "Docker"],
     summary:
       "Recebe dados estruturados, processa via pipeline e gera relatórios em PDF com insights automáticos e recomendações — sem intervenção manual.",
     description:
@@ -23,7 +23,7 @@ const projetos = [
     title: "Plataforma de Agendamento com Pagamentos",
     segment: "Fullstack",
     icon: Layout,
-    stack: ["Next.js", "Node.js", "PostgreSQL", "Stripe", "Google Calendar API"],
+    stack: ["Next.js", "Node.js", "PostgreSQL", "Stripe", "Google Calendar API","Docker"],
     summary:
       "Profissionais expõem suas agendas em tempo real, clientes agendam e pagam diretamente pelo fluxo com sincronização bidirecional via Google Calendar.",
     description:
