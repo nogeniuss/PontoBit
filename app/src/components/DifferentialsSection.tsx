@@ -73,7 +73,7 @@ const DifferentialsSection = () => {
                 <div className="text-sm text-muted-foreground">Anos de experiência</div>
               </div>
               <div className="stat-card p-4 rounded-xl bg-secondary/50 border border-border">
-                <div className="font-display text-3xl font-bold text-gradient">15+</div>
+                <div className="font-display text-3xl font-bold text-gradient">4+</div>
                 <div className="text-sm text-muted-foreground">Devs na equipe</div>
               </div>
               <div className="stat-card p-4 rounded-xl bg-secondary/50 border border-border">

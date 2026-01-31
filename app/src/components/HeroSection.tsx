@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2, Calendar, Users, Zap } from "lucide-react";
 import { Button } from "./ui/button";
 
 const stats = [
-  { number: "50+", label: "Projetos Entregues" },
+  { number: "20+", label: "Projetos Entregues" },
   { number: "98%", label: "Clientes Satisfeitos" },
   { number: "24h", label: "Tempo de Resposta" },
 ];
@@ -105,7 +105,7 @@ const HeroSection = () => {
                   Solicitar Orçamento Grátis
                 </a>
               </Button>
-              <Button
+              {/* <Button
                 size="lg"
                 variant="outline"
                 className="border-border hover:bg-secondary h-14 text-base"
@@ -116,7 +116,7 @@ const HeroSection = () => {
                   Agendar uma Call
                   <ArrowRight size={18} />
                 </a>
-              </Button>
+              </Button> */}
             </motion.div>
           </div>
 
@@ -179,7 +179,7 @@ const HeroSection = () => {
                   ))}
                 </div>
                 <div>
-                  <div className="font-medium text-sm">+50 clientes confiam em nós</div>
+                  <div className="font-medium text-sm">+20 clientes confiam em nós</div>
                   <div className="text-xs text-muted-foreground">
                     Empresas de diversos segmentos
                   </div>
