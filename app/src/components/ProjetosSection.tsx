@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Brain, Layout, Shield, X, ExternalLink } from "lucide-react";
+import { Brain, Layout, Shield, X, ExternalLink, Lock } from "lucide-react";
 
 const projetos = [
   {
@@ -51,9 +51,25 @@ const projetos = [
     ],
     link: "",
   },
+  {
+    title: "Sistema de Detecção e Resposta a Ameaças em Tempo Real",
+    segment: "Cybersegurança",
+    icon: Lock,
+    stack: ["Python", "Elasticsearch", "Kafka", "Suricata", "YARA", "VirusTotal API", "Grafana"],
+    summary:
+      "Monitora tráfego de rede e endpoints em tempo real, detecta anomalias via machine learning e responde automaticamente a ameaças críticas antes que causem dano.",
+    description:
+      "Plataforma SIEM (Security Information and Event Management) que ingere logs de múltiplas fontes via Kafka, correlaciona eventos suspeitos usando regras YARA customizadas e modelos de ML treinados com dados históricos de ataques. O Suricata analisa todo o tráfego de rede em busca de assinaturas conhecidas e comportamentos anômalos, enquanto agents nos endpoints coletam telemetria de processos, conexões e alterações no sistema de arquivos. Qualquer hash suspeito é validado automaticamente contra VirusTotal API. Respostas automáticas incluem bloqueio de IPs, quarentena de processos maliciosos e isolamento de hosts comprometidos. Dashboard centralizado no Grafana exibe métricas de ameaças, tempo médio de detecção e resposta (MTTR), e correlação geográfica de ataques.",
+    results: [
+      { value: "< 3s", label: "Detecção média de ameaças" },
+      { value: "99.2%", label: "Taxa de detecção" },
+      { value: "automática", label: "Resposta a incidentes" },
+    ],
+    link: "",
+  },
 ];
 
-const Modal = ({ projeto, onClose }) => {
+const Modal = ({ projeto, onClose }: { projeto: typeof projetos[0]; onClose: () => void }) => {
   const Icon = projeto.icon;
   return (
     <AnimatePresence>
@@ -150,7 +166,7 @@ const Modal = ({ projeto, onClose }) => {
 };
 
 const ProjetosSection = () => {
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState<typeof projetos[0] | null>(null);
 
   return (
     <section id="projetos" className="py-24 relative bg-secondary/30">
@@ -175,7 +191,7 @@ const ProjetosSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projetos.map((projeto, index) => {
             const Icon = projeto.icon;
             return (
